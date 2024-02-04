@@ -15,6 +15,8 @@ WORKDIR /app
 
 COPY --from=backend-builder /app /app
 
+RUN pip install flask
+
 EXPOSE 5000
 
 CMD ["python", "app.py"]
